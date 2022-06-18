@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>I am the Milk Man</title>
+    <link rel="Stylesheet" type="text/css" media="screen" href="CSStempl.css"/>
+</head>
+<body>
+     <header>Emploi du temp de: {{ niveau }} semestre {{ semestre }}</header>
+     <header>Formation: {{ formation }}</header>
+    <table>
+        <tr><th>Créneau</th><th>Dimanche</th><th>Lundi</th><th>mardi</th><th>Mercredi</th><th>Jeudi</th></tr>
+    {% for item in emploi %}
+    <tr>
+        <td>
+            {{ item.creneau }}
+        </td>
+        <td>
+            {{ item.dimanche }}
+        </td>
+        <td>
+            {{ item.lundi }}
+        </td>
+        <td>
+            {{item.mardi}}
+        </td>
+        <td>
+            {{item.mercredi}}
+        </td>
+        <td>
+            {{item.jeudi}}
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {{ a_variable }}
+
+    {# a comment #}
+</body>
+</html>
